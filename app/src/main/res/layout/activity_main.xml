@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/btn_ScanBLE"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scan_results_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@+id/editTextAuthKey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:itemCount="4"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/row_scan_result" />
+
+    <EditText
+        android:id="@+id/editTextAuthKey"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+        android:gravity="center"
+        android:hint="@string/authKey"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/btn_scan"
+        tools:layout_editor_absoluteX="66dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

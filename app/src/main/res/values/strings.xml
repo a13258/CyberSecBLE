@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CyberSecBLE</string>
+    <string name="btn_ScanBLE">Scan</string>
+    <string name="authKey">Auth Key</string>
+</resources>
